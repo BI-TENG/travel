@@ -1,0 +1,230 @@
+:root {
+  --title: #802a2a;
+  --bg: #e6d8c5;
+  --black: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+/* ------------------------ 天 ------------------------ */
+
+nav {
+  font-size: 1.25rem;
+  background: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 20rem;
+  height: 4rem;
+  background: url(../images/北泰國際旅行社LOGO.png) no-repeat;
+  background-size: contain;
+}
+
+.burger_box {
+  height: 100%;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon-bar {
+  width: 24px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--black);
+  transition: 0.3s;
+  position: absolute;
+}
+
+.icon-bar:nth-of-type(1) {
+  top: 12px;
+}
+
+.icon-bar:nth-of-type(2) {
+  width: 15px;
+  left: 10px;
+}
+
+.icon-bar:nth-of-type(3) {
+  bottom: 12px;
+}
+
+.burger.open .icon-bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 22px;
+}
+
+.burger.open .icon-bar:nth-of-type(2) {
+  transform: translateX(15px) scale(0);
+}
+
+.burger.open .icon-bar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  bottom: 20px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--black);
+  margin-right: 1.2rem;
+  position: relative;
+}
+
+.navbar a:not(.contact)::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease;
+}
+
+.navbar a:not(.contact)::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  transition: width 0.35s ease;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+  background: var(--black);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  background: transparent;
+}
+
+.navbar a:last-of-type {
+  margin-right: 0;
+}
+
+.navbar a.contact {
+  border: 1px solid #737172;
+  border-radius: 50px;
+  padding: 0 .3rem;
+  background: linear-gradient(#f7f6f6, #a6a4a4);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.1), 0px -2px 5px 2px rgba(0, 0, 0, 0.4);
+  transition: .3s;
+}
+
+.navbar a.contact:hover {
+  box-shadow: inset 3px 3px rgb(0, 0, 0, 0.15), inset -3px -3px rgb(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 1px #fff;
+  transition: .3s;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width:991px) {
+  nav {
+    border-bottom: 1px solid var(--bg);
+  }
+  .burger_box {
+    display: flex;
+  }
+  .navbar {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 10%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .navbar a.contact {
+    box-shadow: none;
+    background: none;
+    border: none;
+  }
+  .navbar a.contact:hover {
+    box-shadow: none;
+    text-shadow: none;
+  }
+  .navbar a,
+  .navbar a.contact {
+    width: 100%;
+    padding: 1rem;
+    margin-right: 0;
+    text-align: center;
+  }
+  .navbar a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: width .5s ease;
+  }
+  .navbar a::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: var(--bg);
+    z-index: -1;
+    transition: width .5s ease;
+  }
+  .navbar a:hover::before {
+    width: 100%;
+    background: var(--bg);
+  }
+  .navbar a:hover::after {
+    width: 100%;
+    background: transparent;
+  }
+}
