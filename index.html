@@ -7,11 +7,13 @@
   <title>乙泰旅遊豐碩假期</title>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
   <nav>
     <div class="container">
       <div class="logo"></div>
@@ -24,17 +26,62 @@
         </a>
       </div>
 
-      <div class="navbar">
-        <a href="#section_a">Our Story</a>
-        <a href="#section_b">About Taiwan</a>
-        <a href="#section_c">Tours</a>
-        <a href="#section_d">Transfer Service</a>
-        <a href="#section_e" class="contact">Contact us</a>
+      <div class="navbar_box">
+        <div class="navbar">
+          <a href="#section_a" class="nav-link">Our Story</a>
+          <a href="#section_b" class="nav-link">About Taiwan</a>
+          <a href="#section_c" class="nav-link">Tours</a>
+          <a href="#section_d" class="nav-link">Transfer Service</a>
+          <a href="#section_e" class="nav-link contact">Contact us</a>
+        </div>
+
+        <div class="mobile_link">
+          <a href="" class="fb">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="" class="youtube">
+            <i class="fa-brands fa-youtube-square"></i>
+          </a>
+          <a href="" class="line">
+            <i class="fa-brands fa-line"></i>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <section></section>
+  <div class="content">
+    <div class="banner">
+      <img src="./images/banner.jpg" alt="">
+    </div>
+
+    <section id="section_a">
+      <div class="container">
+        <h1>About Relax Go Taiwan</h1>
+        <div class="txt">
+          Relax Go Taiwan was established in 1999, quickly gaining the No.1 reputation from Evaluation Highways Administration in 2015 with an astounding capital of 6 Million Euros. We provide more than 30 unique planned tours weekly, and customized itineraries
+          for each and every individual guest and group that use Relax Go Tour. Our expert guides have more than five years of experience and their hearts filled with even more passion to bring our guests into experiencing traditional culture and special
+          cuisine available only in Taiwan. The core idea of Relax Go Tour is to provide a safe and amazing experience for any and all of our guests.
+        </div>
+      </div>
+    </section>
+
+    <section id="section_b">
+      <h1>Why choose us</h1>
+    </section>
+
+    <section id="section_c">
+      <h1>Taiwan Tours</h1>
+    </section>
+
+    <section id="section_d">
+      <h1>Here Are Our Customers Reviews</h1>
+    </section>
+
+    <section id="section_e">
+      <h1>Customized Your Trip</h1>
+    </section>
+  </div>
 
   <script src="./js/jquery.min.js"></script>
   <script src="./bootstrap/js/popper.min.js"></script>
