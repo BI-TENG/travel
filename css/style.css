@@ -514,6 +514,12 @@ section .txt {
   }
 }
 
+@media (max-width:425px) {
+  .tours_title {
+    text-align: center;
+  }
+}
+
 
 /* ------------------------ section_d ------------------------ */
 
