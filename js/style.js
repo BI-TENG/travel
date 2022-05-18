@@ -99,4 +99,25 @@ $(document).ready(function() {
     }
   });
 
+  $('.reviews_carousel').owlCarousel({
+    items: 1,
+    loop: false,
+    margin: 30,
+    dots: true,
+    responsive: {
+      768: {
+        items: 2,
+        margin: 50,
+        loop: false,
+        dots: true
+      },
+      1000: {
+        items: 3,
+        margin: 50,
+        loop: false,
+        dots: false
+      }
+    }
+  });
+
 })
