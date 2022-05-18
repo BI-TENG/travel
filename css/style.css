@@ -240,12 +240,10 @@ a.contact.nav-link.active,
     width: 10em;
     height: 100%;
     position: fixed;
-    /* left: 0; */
     right: -100%;
     top: 83px;
     background: #fff;
     transition: .5s;
-    /* display: none; */
   }
   .navbar_box.show {
     right: 0;
@@ -303,6 +301,9 @@ a.contact.nav-link.active,
   .navbar a.contact::before,
   .navbar a.contact::after {
     content: '';
+  }
+  a.contact.nav-link.active {
+    box-shadow: none;
   }
 }
 
