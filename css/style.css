@@ -24,6 +24,14 @@ img {
   max-width: 100%
 }
 
+figure {
+  margin: 0;
+}
+
+.container {
+  padding: 0 16px;
+}
+
 
 /* ------------------------ 天 ------------------------ */
 
@@ -37,6 +45,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 nav .container {
@@ -171,6 +180,7 @@ nav .container {
   transition: .3s;
 }
 
+a.contact.nav-link.active,
 .navbar a.contact:hover {
   box-shadow: inset 3px 3px rgb(0, 0, 0, 0.15), inset -3px -3px rgb(0, 0, 0, 0.15);
   text-shadow: 1px 1px 1px #fff;
@@ -209,13 +219,13 @@ nav .container {
   }
 }
 
-@media (min-width:991px) {
+@media (min-width:1199px) {
   .mobile_link {
     display: none;
   }
 }
 
-@media (max-width:991px) {
+@media (max-width:1199px) {
   .logo {
     width: 15rem;
     height: 3rem;
@@ -227,14 +237,19 @@ nav .container {
     display: flex;
   }
   .navbar_box {
-    width: 100vw;
-    height: 45%;
+    width: 10em;
+    height: 100%;
     position: fixed;
-    left: 0;
-    right: 0;
+    /* left: 0; */
+    right: -100%;
     top: 83px;
     background: #fff;
-    display: none;
+    transition: .5s;
+    /* display: none; */
+  }
+  .navbar_box.show {
+    right: 0;
+    transition: .5s;
   }
   .navbar a.contact {
     box-shadow: none;
@@ -275,10 +290,12 @@ nav .container {
     z-index: -1;
     transition: width .3s ease;
   }
+  .nav-link.active::before,
   .navbar a:hover::before {
     width: 100%;
     background: #FCE1CC;
   }
+  .nav-link.active::after,
   .navbar a:hover::after {
     width: 100%;
     background: transparent;
@@ -290,14 +307,24 @@ nav .container {
 }
 
 
-/* ------------------------ 內容 ------------------------ */
+/* ------------------------ banner ------------------------ */
 
 .banner img {
   display: block;
 }
 
+@media (max-width:425px) {
+  .banner img {
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+
+/* ------------------------ section_a ------------------------ */
+
 section {
-  padding: 1rem;
+  padding: 1rem 0;
   min-height: 100vh;
 }
 
@@ -305,12 +332,28 @@ section h1 {
   font-size: 3rem;
   color: var(--title);
   text-align: center;
-  margin: 3rem 0 2.5rem;
+  margin: 5rem 0 2.5rem;
 }
 
 section .txt {
   font-size: 1.125rem;
   text-align: center;
+  margin-bottom: 4rem;
+}
+
+.owl-stage-outer {
+  padding: 1rem 0;
+}
+
+.owl-carousel .owl-item img {
+  width: auto;
+  margin: 0 auto;
+}
+
+.bus_txt {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 @media (max-width:1440px) {
@@ -319,9 +362,145 @@ section .txt {
   }
 }
 
+@media (max-width:500px) {
+  .container.carousel {
+    max-width: 100%;
+    padding: 0;
+  }
+  .tours_carousel .owl-item,
+  .bus_carousel .owl-item {
+    opacity: .5;
+  }
+  .tours_carousel .owl-item.active.center,
+  .bus_carousel .owl-item.active.center {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: .5s;
+  }
+}
+
 @media (max-width:425px) {
-  .banner img {
-    height: 150px;
-    object-fit: cover;
+  section h1 {
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem;
+  }
+}
+
+
+/* ------------------------ section_b ------------------------ */
+
+.choose_box h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.choose_txt {
+  font-size: 1.125rem;
+  text-align: center;
+  min-height: 160px;
+  margin-bottom: 1rem;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #BABEE6;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #747899;
+}
+
+@media (max-width:1199px) {
+  .choose_txt {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .choose_txt {
+    min-height: 180px;
+  }
+}
+
+@media (max-width:767px) {
+  .choose_txt {
+    min-height: 150px;
+  }
+}
+
+@media (max-width:420px) {
+  .choose_txt {
+    min-height: 170px;
+  }
+}
+
+
+/* ------------------------ section_c ------------------------ */
+
+.day_box {
+  display: flex;
+  overflow: hidden;
+  /* border: 1px solid blue; */
+}
+
+.tours_title {
+  padding: 1rem 0;
+}
+
+.tours_title h4 {
+  width: 71%;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-right: 2rem;
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  background: linear-gradient(#fff, #0270a7, #008dd2);
+  box-shadow: inset 3px 0 2px rgba(4, 87, 130, 0.9), inset -3px 0 2px rgba(4, 87, 130, 0.9);
+}
+
+.tours_carousel {
+  width: 80%;
+}
+
+.tours_txt {
+  font-size: 1.25rem;
+  color: var(--black);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.tours_img {
+  overflow: hidden;
+}
+
+.tours_carousel a img {
+  transition: .5s;
+}
+
+.tours_carousel a:hover img {
+  transform: scale(1.2);
+  filter: brightness(60%);
+  transition: .5s;
+}
+
+@media (max-width:1199px) {
+  .day_box {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .tours_title h4 {
+    width: auto;
+    display: inline-block;
+    margin-right: 0;
+  }
+  .tours_carousel {
+    width: 100%;
+  }
+}
+
+@media (max-width:500px) {
+  .tours_title h4 {
+    margin: 0 1rem;
   }
 }

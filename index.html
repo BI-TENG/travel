@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/all.min.css">
   <link rel="stylesheet" href="./css/animate.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="0">
+<body data-spy="scroll" data-target="nav" data-offset="100">
   <nav>
     <div class="container">
       <div class="logo"></div>
@@ -36,13 +37,13 @@
         </div>
 
         <div class="mobile_link">
-          <a href="" class="fb">
+          <a href="" class="fb" target="_blank">
             <i class="fa-brands fa-facebook-square"></i>
           </a>
-          <a href="" class="youtube">
+          <a href="" class="youtube" target="_blank">
             <i class="fa-brands fa-youtube-square"></i>
           </a>
-          <a href="" class="line">
+          <a href="" class="line" target="_blank">
             <i class="fa-brands fa-line"></i>
           </a>
         </div>
@@ -64,14 +65,179 @@
           cuisine available only in Taiwan. The core idea of Relax Go Tour is to provide a safe and amazing experience for any and all of our guests.
         </div>
       </div>
+
+      <div class="container carousel">
+        <div class="bus_carousel owl-carousel owl-theme">
+          <figure class="bus_img">
+            <img src="./images/bus_1.png" alt="">
+            <figcaption class="bus_txt">8 seater Van</figcaption>
+          </figure>
+          <figure class="bus_img">
+            <img src="./images/bus_2.png" alt="">
+            <figcaption class="bus_txt">20 seater mini coach</figcaption>
+          </figure>
+          <figure class="bus_img">
+            <img src="./images/bus_3.png" alt="">
+            <figcaption class="bus_txt">43 seater coach</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
     <section id="section_b">
       <h1>Why choose us</h1>
+      <div class="container">
+        <div class="choose_carousel owl-carousel owl-theme">
+          <figure class="choose_box">
+            <figcaption class="choose_txt">
+              <h2>Expert of Taiwan tour</h2>
+              We have been in the business for more than 20years in Taiwan.
+            </figcaption>
+            <img src="./images/c1.jpg" alt="">
+          </figure>
+
+          <figure class="choose_box">
+            <figcaption class="choose_txt">
+              <h2>Customized tour</h2>
+              We provide more than transportation. Easyta not only provide services of transportation but also arrange customer’s itinerary as a travel agency.
+            </figcaption>
+            <img src="./images/c2.jpg" alt="">
+          </figure>
+
+          <figure class="choose_box">
+            <figcaption class="choose_txt">
+              <h2>Safe and quality service</h2>
+              We are also a service and quality award winner issued by directorate general of highways, MOTC.
+            </figcaption>
+            <img src="./images/c3.jpg" alt="">
+          </figure>
+        </div>
+      </div>
     </section>
 
     <section id="section_c">
       <h1>Taiwan Tours</h1>
+      <div class="container carousel">
+        <div class="day_box">
+          <div class="tours_title">
+            <h4>Taipei one day tours</h4>
+          </div>
+          <div class="tours_carousel owl-carousel owl-theme">
+            <a href="https://drive.google.com/open?id=1xvThs3X-MGLp1Shkh-cqIrBL3Sl2USxj&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/one_1.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Taipei city tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1xskTNkKGEM4RZWmJwmFjCHm3Sw9ROUox&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/one_2.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Taipei food tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1xw___W-N1rZL_tkp95sqkeifaJKf5-JS&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/one_3.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">North Coast Tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1xwfmKSxLvWaFull717lAnNYwNiItyADY&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/one_4.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Jiufen tour</figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+
+        <div class="day_box">
+          <div class="tours_title">
+            <h4>Taipei two day tours</h4>
+          </div>
+          <div class="tours_carousel owl-carousel owl-theme">
+            <a href="https://drive.google.com/open?id=1y65kY10acw6C2seH3h35v_99SzZNCX06&authuser=admin%40taiwanyu.com.tw&usp=drive_fs">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/two_1.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Taroko gorge tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1yBv0oQ0iJ0H3yeh9Iley7UM9GsrNuaXV&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/two_2.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Sun Moon Lake tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1y0MMpAacEXNpDVZs7T4diTMz5SX9UimA&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/two_3.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Central Taiwan Tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1zviBHdhaW9ZZTMtjVaCkoPxgS1Qs4G_x&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/two_4.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Yilan tour</figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+
+        <div class="day_box">
+          <div class="tours_title">
+            <h4>Taipei three days plus tours</h4>
+          </div>
+          <div class="tours_carousel owl-carousel owl-theme">
+            <a href="https://drive.google.com/open?id=1y1DXi6sKWfW5pIGoX27MIQRFFpYUC0ew&authuser=admin%40taiwanyu.com.tw&usp=drive_fs">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/three_1.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Three days Southen Taiwan tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1y3tumNZXZlFYG-ZAQyuhES43G_OA447X&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/three_2.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Three days Kenting tropical tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1xRlKaYaUz3QGnCPJsPqIrJx6Tx3tpciz&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/three_3.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Five days around the island tour</figcaption>
+              </figure>
+            </a>
+            <a href="https://drive.google.com/open?id=1xRlKaYaUz3QGnCPJsPqIrJx6Tx3tpciz&authuser=admin%40taiwanyu.com.tw&usp=drive_fs" target="_blank">
+              <figure class="tours_box">
+                <div class="tours_img">
+                  <img src="./images/three_4.jpg" alt="">
+                </div>
+                <figcaption class="tours_txt">Five days best of Taiwan tour</figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="section_d">
@@ -86,7 +252,7 @@
   <script src="./js/jquery.min.js"></script>
   <script src="./bootstrap/js/popper.min.js"></script>
   <script src="./bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
   <script src="./js/style.js"></script>
 
 </body>
